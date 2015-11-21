@@ -19,10 +19,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.quickstarts.eap</groupId>
-    <artifactId>jboss-kitchensink</artifactId>
+    <artifactId>jboss-kitchensink-hibernate-2lc</artifactId>
     <version>6.4.0.GA</version>
     <packaging>war</packaging>
-    <name>JBoss EAP Quickstart: kitchensink</name>
+    <name>JBoss EAP Quickstart: kitchensink-hibernate-2lc</name>
     <description>A starter Java EE 6 webapp project for use on JBoss EAP 6, generated from the jboss-javaee6-webapp archetype</description>
 
     <url>http://jboss.org/jbossas</url>
