@@ -55,6 +55,12 @@ public class MemberRepository {
         // feature in JPA 2.0
         // criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
         criteria.select(member).orderBy(cb.asc(member.get("name")));
-        return em.createQuery(criteria).getResultList();
+        return em.createQuery(criteria)
+        		// Use the Hibernate-specific property to enable query caching
+        		.setHint("org.hibernate.cacheable", Boolean.TRUE)
+        		// Set these properties if fine-grained caching settings are desired
+//        		.setHint("javax.persistence.cache.storeMode", CacheStoreMode.USE)
+//        		.setHint("javax.persistence.cache.retrieveMode", CacheRetrieveMode.USE)
+        		.getResultList();
     }
 }
