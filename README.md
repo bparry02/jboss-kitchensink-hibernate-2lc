@@ -1,3 +1,25 @@
+Kitchensink Hibernate Second Level Cache
+================================
+Modified the JBoss Kitchensink Quickstart to enable Hibernate Second Level Caching for entities and Queries.
+
+   <persistence-unit name="primary">
+      ...
+      <!-- Cache only enabled for entities annotated with @Cacheable-->
+      <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+      
+      <properties>
+         ...
+         <!-- Enable Hibernate Second Level Cache -->
+         <property name="hibernate.cache.use_second_level_cache" value="true"/>
+         <property name="hibernate.cache.use_query_cache" value="true" />
+      </properties>
+   </persistence-unit>
+
+
+
+
+
+
 kitchensink: Assortment of technologies including Arquillian
 ========================
 Author: Pete Muir  
